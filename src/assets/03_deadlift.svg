@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Deadlift icon">
+  <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="68" cy="24" r="10" fill="currentColor" stroke="none"/>
+    <path d="M58 38L42 62l14 18"/>
+    <path d="M58 38l22 18 4 24"/>
+    <path d="M34 82h60"/>
+    <path d="M16 82h18M94 82h18"/>
+    <path d="M16 68v28M26 72v20M112 68v28M102 72v20"/>
+    <path d="M56 80L48 104"/>
+    <path d="M84 80l10 24"/>
+  </g>
+</svg>

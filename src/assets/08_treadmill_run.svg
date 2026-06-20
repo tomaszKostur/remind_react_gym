@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Treadmill running icon">
+  <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="72" cy="24" r="10" fill="currentColor" stroke="none"/>
+    <path d="M64 40l-16 24"/>
+    <path d="M64 40l18 22"/>
+    <path d="M48 64l-18 8"/>
+    <path d="M82 62l-18 20"/>
+    <path d="M64 82l-20 18"/>
+    <path d="M82 62l22-12"/>
+    <path d="M16 108h84c12 0 20-8 20-20"/>
+    <path d="M94 64h24"/>
+    <path d="M118 64l-12 28"/>
+  </g>
+</svg>

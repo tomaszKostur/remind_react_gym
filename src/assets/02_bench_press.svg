@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Bench press icon">
+  <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="34" cy="74" r="8" fill="currentColor" stroke="none"/>
+    <path d="M24 88h72"/>
+    <path d="M28 96v10M92 96v10"/>
+    <path d="M42 74h44"/>
+    <path d="M50 70V40M78 70V40"/>
+    <path d="M24 36h80"/>
+    <path d="M12 36h12M104 36h12"/>
+    <path d="M12 26v20M20 23v26M116 26v20M108 23v26"/>
+  </g>
+</svg>

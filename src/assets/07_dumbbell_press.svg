@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Dumbbell shoulder press icon">
+  <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="48" r="10" fill="currentColor" stroke="none"/>
+    <path d="M46 66l18 14 18-14"/>
+    <path d="M46 66V34M82 66V34"/>
+    <path d="M34 30h24M70 30h24"/>
+    <path d="M30 22v16M62 22v16M66 22v16M98 22v16"/>
+    <path d="M64 80v34"/>
+    <path d="M50 114h28"/>
+  </g>
+</svg>
