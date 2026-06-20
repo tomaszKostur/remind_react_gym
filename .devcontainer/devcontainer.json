@@ -1,0 +1,10 @@
+{
+  "name": "react_refresh_gym",
+  "build": { "dockerfile": "../dev_env.containerfile", "context": ".." },
+  "runArgs": ["--network=host"],
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  }
+}
