@@ -1,18 +1,20 @@
-pre-commit:
-  parallel: true
-  jobs:
-    - name: format
-      glob: "*.{css,js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: pnpm prettier --write {staged_files}
-      stage_fixed: true
+# INFO: I don't need it yet, And it's pretty annoying now
 
-    - name: format package.json
-      glob: "package.json"
-      run: pnpm sort-package-json
+# pre-commit:
+#   parallel: true
+#   jobs:
+#     - name: format
+#       glob: "*.{css,js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+#       run: pnpm prettier --write {staged_files}
+#       stage_fixed: true
 
-    - name: lint
-      glob: "*"
-      run: pnpm biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+#     - name: format package.json
+#       glob: "package.json"
+#       run: pnpm sort-package-json
 
-    - name: type check
-      run: pnpm check-types
+#     - name: lint
+#       glob: "*"
+#       run: pnpm biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+
+#     - name: type check
+#       run: pnpm check-types
