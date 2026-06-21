@@ -10,18 +10,17 @@
 //   );
 // }
 
-
 import ChooseExcersise from "./ChooseExcersise";
-import Header from "./Header"
-
-
+import Header from "./Header";
+import NavButton from "./NavButton";
 
 function App() {
   return (
     <div>
       <Header />
       <main>
-        <ChooseExcersise/>
+        <ChooseExcersise />
+        <NavButton target='/game' name='Go to Game<'/>
       </main>
     </div>
   );
