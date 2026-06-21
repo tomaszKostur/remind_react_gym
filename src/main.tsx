@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "@/routes";
 import App from "@/App";
+import Game from "@/Game";
 import "@/global";
 
 const container = document.getElementById("root") as HTMLElement;
@@ -16,6 +17,12 @@ const router = createBrowserRouter([
     children: routes,
     errorElement: <div>error</div>,
   },
+  {
+    path: "/game",
+    element: <Game />,
+    children: routes,
+    errorElement: <div>error</div>
+  }
 ]);
 
 root.render(

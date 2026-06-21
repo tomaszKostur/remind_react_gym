@@ -26,7 +26,7 @@ type ExerciseTabProps = {
 function ExcersiseTab({ img, name, level, onClickHandler }: ExerciseTabProps): import("react").JSX.Element {
   return (
     <li>
-      <img src={img} alt={name} class="icon-white" />
+      <img src={img} alt={name} className="icon-white" />
       <h3>{name}</h3>
       <p>{level}</p>
       <button onClick={onClickHandler}>Do it</button>
