@@ -37,9 +37,11 @@ function ExcersiseTab({ img, name, level, onClickHandler }: ExerciseTabProps): i
 
 function ChooseExcersise() {
   const [current_excercise, current_excercise_setter] = useState("bench");
+
   function description_change(new_excercise: SetStateAction<string>) {
     current_excercise_setter(new_excercise);
   }
+  
   return (
     <div>
       <h2>

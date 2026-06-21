@@ -1,7 +1,7 @@
 function NavButton({target, name}) {
     return (
   <div className="centered">
-    <button id="game-button">
+    <button id="nav-button">
       <a href={target}>{name}</a>
     </button>
   </div>
