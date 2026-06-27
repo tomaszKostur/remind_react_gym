@@ -4,8 +4,8 @@ function Header() {
   return (
     <header>
       <img src={gymImg} alt="Gym logo" />
-      <h1>React Remind gym</h1>
-      <p>Lets for once do not care about styling and use one from example.</p>
+      <h1>React Demo Gym</h1>
+      <p>Explore react functionalities as a personal demo.</p>
     </header>
   );
 }

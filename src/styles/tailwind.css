@@ -1,4 +1,5 @@
-/* @import "tailwindcss"; */
+/* let's skip the tailwind this time */
+/* @import "tailwindcss"; */  
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
@@ -19,6 +20,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   min-height: 80rem;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: #a18aba;
+  margin: 1rem 0;
+  color: #a18aba;
 }
 
 header {
@@ -62,10 +71,24 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
+main p {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0 0 1rem 0;
+  color: #a18aba;
+}
+
 main h2 {
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
-  margin: 0 0 1.5rem 0;
+  margin: 1.5rem 0 1.5rem 0;
+  color: #a18aba;
+}
+
+main h3 {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 1.5rem 0 1.5rem 0;
   color: #a18aba;
 }
 
@@ -173,7 +196,7 @@ main h2 {
   filter: brightness(0) invert(1);
 }
 
-.game ol {
+/* .game ol {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -181,14 +204,14 @@ main h2 {
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
-.game li {
+/* .game li {
   width: 10rem;
   text-align: center;
-}
+} */
 
-.game li img {
+/* .game li img {
   height: 6rem;
   width: 6rem;
   object-fit: cover;
@@ -200,7 +223,7 @@ main h2 {
 
 .game li p {
   font-size: 0.9rem;
-}
+} */
 
 .game button {
   padding: 0.5rem 1rem;
@@ -284,7 +307,7 @@ main h2 {
   list-style-position: inside;
   padding: 0;
   margin: 0;
-  gap: 0;;
+  gap: 0;
 }
 
 .game-board ol {
@@ -294,6 +317,9 @@ main h2 {
   padding: 0;
   /* background-color: brown; */
   list-style: none;
+  justify-content: center;
+  margin: 0;
+  /* flex-wrap: wrap; */
 }
 
 .game-board ol li {
@@ -309,4 +335,32 @@ main h2 {
 }
 .game-board ol li:hover {
   background-color: rgb(68, 97, 179);
+}
+
+/* player classes */
+.player-container {
+  display: flex;
+  /* background-color: brown; */
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  /* width: fit-content; */
+}
+
+.player-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.player-symbol {
+  margin-inline: 1rem;
+}
+
+.game-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }

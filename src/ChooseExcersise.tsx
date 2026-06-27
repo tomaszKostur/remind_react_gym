@@ -44,6 +44,9 @@ function ChooseExcersise() {
   
   return (
     <div>
+      <h2>Demo of dynamic text content. "Do it" exercise and see what is good for! </h2>
+      <p>Look also at randimized topic and number of sets.</p>
+      <hr/>
       <h2>
         Todays gym topic is: {gymTopics[genRandomInt(2)]}. Do{" "}
         {genRandomInt(100)} number of sets
@@ -75,7 +78,7 @@ function ChooseExcersise() {
             }}
           />
         </ul>
-        <p>{description_map[current_excercise]}</p>
+        <h2 className="mt-1">{description_map[current_excercise]}</h2>
       </section>
     </div>
   );
