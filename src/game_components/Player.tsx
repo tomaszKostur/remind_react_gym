@@ -1,6 +1,6 @@
 import { SetStateAction, useState } from "react";
 
-function Player({ name, symbol }: { name: string; symbol: string }) {
+function Player({ name, symbol, active }: { name: string; symbol: string , active: boolean}) {
   const [isEditing, setIsEditing] = useState(false);
   const [playerName, setPlayerName] = useState(name)
   function handleEditClick(){
@@ -17,7 +17,7 @@ function Player({ name, symbol }: { name: string; symbol: string }) {
 
 
   return (
-    <li className="player-container">
+    <li className={`player-container ${active ? 'player-container-active' : ''}`}>
       <span className="player-name">
         {playerNameElement}
         <span className="player-symbol">{symbol}</span>

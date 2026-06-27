@@ -354,6 +354,12 @@ main h3 {
   /* width: fit-content; */
 }
 
+.player-container-active {
+  border: 4px solid rgb(0, 140, 255);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
 .player-name {
   display: flex;
   align-items: center;
