@@ -344,6 +344,31 @@ main h3 {
   background-color: rgb(68, 97, 179);
 }
 
+/* GameOver classes */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  min-width: 320px;
+  max-width: 500px;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 /* player classes */
 .player-container {
   display: flex;

@@ -1,10 +1,11 @@
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useRef, useState } from "react";
 
 import Header from "@/Header";
 import { Fragment } from "react/jsx-runtime";
 import NavButton from "./NavButton";
 import Player from "./game_components/Player";
 import GameBoard from "./game_components/GameBoard";
+import GameOver from "./game_components/GameOver";
 
 const initial_game_board = [
   [null, null, null],
@@ -12,9 +13,34 @@ const initial_game_board = [
   [null, null, null],
 ];
 
+function checkWinner(boardData) {
+  for(let i =0; i<3 ; i++){
+    for(let symbol of ['X', 'O']){
+      if (boardData[i][0] == symbol && boardData[i][1] == symbol && boardData[i][2] == symbol){
+        return symbol;
+      }
+      if (boardData[0][i] == symbol && boardData[1][i] == symbol && boardData[2][i] == symbol){
+        return symbol;
+      }
+    }
+  }
+  for(let symbol of ['X', 'O']){
+    if (boardData[0][0] == symbol && boardData[1][1] == symbol && boardData[2][2] == symbol){
+        return symbol;
+    }
+    if (boardData[2][2] == symbol && boardData[1][1] == symbol && boardData[0][0] == symbol){
+        return symbol;
+    }
+  }
+  return
+}
+
 function Game() {
   const [boardData, setBoardData] = useState(initial_game_board);
   const [currentPlayer, setCurrentPlayer] = useState("X");
+  const [winner, setWinner] = useState(null);
+  // let winner = null;
+  // console.log(`winner: ${winner}`);
 
   function handleMove(row: number, col: number) {
     setCurrentPlayer((prev) => (prev === "X" ? "O" : "X"));
@@ -26,8 +52,15 @@ function Game() {
       // first step is nust a shallow copy previous
       const next_board = prev.map((row) => [...row]);
       next_board[row][col] = currentPlayer;
+      setWinner(checkWinner(next_board));
       return next_board;
     });
+    // setWinner(checkWinner(boardData));
+  }
+
+  function cleanBaord(){
+    setBoardData(initial_game_board);
+    setWinner(null);
   }
 
   return (
@@ -48,7 +81,8 @@ function Game() {
           />
         </ol>
         <GameBoard onMoveHaldler={handleMove} boardData={boardData} />
-        <NavButton target={"/"} name="Home" />
+        {winner ? <GameOver onRestart={cleanBaord} winnerName={`${winner}`}/> : ''}
+        {<NavButton target={"/"} name="Home" />}
       </main>
     </div>
   );
