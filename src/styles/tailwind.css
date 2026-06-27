@@ -237,6 +237,13 @@ main h3 {
   transition: all 0.2s ease-in-out;
 }
 
+.game h1 {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 1.5rem 0 1.5rem 0;
+  color: #a18aba;
+}
+
 .game button:hover {
   background-color: #523175;
   color: #ebe7ef;

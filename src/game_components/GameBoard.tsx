@@ -1,100 +1,44 @@
 import { SetStateAction, useState } from "react";
 
+const initial_game_board = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null],
+];
+
 function GameBoard() {
+  const [boardData, setBoardData] = useState(initial_game_board);
   const [currentPlayer, setCurrentPlayer] = useState("X");
-  const [boardData, setBoardData] = useState({
-    "11": "_",
-    "12": "_",
-    "13": "_",
-    "21": "_",
-    "22": "_",
-    "23": "_",
-    "31": "_",
-    "32": "_",
-    "33": "_",
-  });
 
-  function moveHandler(position: string) {
-    if (boardData[position] !== "_") return;
+  function moveHandler(row: number, col: number) {
+    console.log(`moveHandler: ${boardData} , ${row}: ${col}`);
+    // if cell is already filled then to nothing
+    if (boardData[row][col] !== null) return;
 
-    setBoardData((prev) => ({
-      ...prev,
-      [position]: currentPlayer,
-    }));
+    setBoardData((prev) => {
+      // first step is nust a shallow copy previous
+      const next_board = prev.map((row) => [...row]);
+      next_board[row][col] = currentPlayer;
+      return next_board;
+    });
     setCurrentPlayer((prev) => (prev === "X" ? "O" : "X"));
   }
 
   return (
     <div className="game-board">
-      <ol>
-        <li
-          onClick={() => {
-            moveHandler("11");
-          }}
-        >
-          {boardData["11"]}
-        </li>
-        <li
-          onClick={() => {
-            moveHandler("12");
-          }}
-        >
-          {boardData["12"]}
-        </li>
-        <li
-          onClick={() => {
-            moveHandler("13");
-          }}
-        >
-          {boardData["13"]}
-        </li>
-      </ol>
-      <ol>
-        <li
-          onClick={() => {
-            moveHandler("21");
-          }}
-        >
-          {boardData["21"]}
-        </li>
-        <li
-          onClick={() => {
-            moveHandler("22");
-          }}
-        >
-          {boardData["22"]}
-        </li>
-        <li
-          onClick={() => {
-            moveHandler("23");
-          }}
-        >
-          {boardData["23"]}
-        </li>
-      </ol>
-      <ol>
-        <li
-          onClick={() => {
-            moveHandler("31");
-          }}
-        >
-          {boardData["31"]}
-        </li>
-        <li
-          onClick={() => {
-            moveHandler("32");
-          }}
-        >
-          {boardData["32"]}
-        </li>
-        <li
-          onClick={() => {
-            moveHandler("33");
-          }}
-        >
-          {boardData["33"]}
-        </li>
-      </ol>
+      {boardData.map((row, rowIdx) => {
+        return (
+          <ol key={rowIdx}>
+            {row.map((col, colIdx) => {
+              return (
+                <li key={colIdx} onClick={() => moveHandler(rowIdx, colIdx)}>
+                  {boardData[rowIdx][colIdx]}
+                </li>
+              );
+            })}
+          </ol>
+        );
+      })}
     </div>
   );
 }
