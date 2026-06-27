@@ -10,7 +10,7 @@
 //   );
 // }
 
-import ChooseExcersise from "./ChooseExcersise";
+import ChooseExcersise from "./excersise_components/ChooseExcersise";
 import Header from "./Header";
 import NavButton from "./NavButton";
 

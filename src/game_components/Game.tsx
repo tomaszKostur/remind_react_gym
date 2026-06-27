@@ -2,10 +2,10 @@ import { SetStateAction, useRef, useState } from "react";
 
 import Header from "@/Header";
 import { Fragment } from "react/jsx-runtime";
-import NavButton from "./NavButton";
-import Player from "./game_components/Player";
-import GameBoard from "./game_components/GameBoard";
-import GameOver from "./game_components/GameOver";
+import NavButton from "@/NavButton";
+import Player from "./Player";
+import GameBoard from "./GameBoard";
+import GameOver from "./GameOver";
 
 const initial_game_board = [
   [null, null, null],

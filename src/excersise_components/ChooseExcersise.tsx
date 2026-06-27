@@ -1,7 +1,8 @@
 import { SetStateAction, useState } from "react";
-import benchPressImg from "./assets/02_bench_press.svg";
-import deadliftImg from "./assets/03_deadlift.svg";
-import barbelSquatImg from "./assets/01_barbell_squat.svg";
+import benchPressImg from "@/assets/02_bench_press.svg";
+import deadliftImg from "@/assets/03_deadlift.svg";
+import barbelSquatImg from "@/assets/01_barbell_squat.svg";
+import ExcersiseTab from "./ExcersiseTab";
 
 
 const gymTopics = ["Fundamental", "Crucial", "Core"];
@@ -16,23 +17,6 @@ const description_map = {
   squat: "good_for legs",
 };
 
-type ExerciseTabProps = {
-  img: string;
-  name: string;
-  level: string;
-  onClickHandler: () => void;
-};
-
-function ExcersiseTab({ img, name, level, onClickHandler }: ExerciseTabProps): import("react").JSX.Element {
-  return (
-    <li>
-      <img src={img} alt={name} className="icon-white" />
-      <h3>{name}</h3>
-      <p>{level}</p>
-      <button onClick={onClickHandler}>Do it</button>
-    </li>
-  );
-}
 
 
 function ChooseExcersise() {
