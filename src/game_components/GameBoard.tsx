@@ -1,6 +1,4 @@
-
-function GameBoard({onMoveHaldler, boardData}) {
-
+function GameBoard({ onMoveHaldler, boardData }) {
   return (
     <div className="game-board">
       {boardData.map((row, rowIdx) => {
