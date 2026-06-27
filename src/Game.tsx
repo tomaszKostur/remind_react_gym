@@ -28,7 +28,7 @@ function checkWinner(boardData) {
     if (boardData[0][0] == symbol && boardData[1][1] == symbol && boardData[2][2] == symbol){
         return symbol;
     }
-    if (boardData[2][2] == symbol && boardData[1][1] == symbol && boardData[0][0] == symbol){
+    if (boardData[0][2] == symbol && boardData[1][1] == symbol && boardData[2][0] == symbol){
         return symbol;
     }
   }
