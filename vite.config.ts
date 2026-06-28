@@ -19,6 +19,7 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  base: "/react_demo/",
   build: {
     rollupOptions: {
       output: {

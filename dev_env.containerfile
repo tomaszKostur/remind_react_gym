@@ -2,7 +2,7 @@
 FROM node:26-trixie as dev_env 
 
 RUN apt-get update \
-    && apt-get install -y curl less vim nginx
+    && apt-get install -y curl less vim nginx tree
 RUN npm install -g pnpm
 # remofe debian nginx configuration
 RUN rm /etc/nginx/sites-enabled/default 

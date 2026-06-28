@@ -11,26 +11,31 @@ const container = document.getElementById("root") as HTMLElement;
 
 const root = createRoot(container);
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: routes,
+      errorElement: <div>error</div>,
+    },
+    {
+      path: "/game",
+      element: <Game />,
+      children: routes,
+      errorElement: <div>error</div>,
+    },
+    {
+      path: "/external_data",
+      element: <ExternalData />,
+      children: routes,
+      errorElement: <div>error</div>,
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: routes,
-    errorElement: <div>error</div>,
+    basename: "/react_demo",
   },
-  {
-    path: "/game",
-    element: <Game />,
-    children: routes,
-    errorElement: <div>error</div>
-  },
-  {
-    path: "/external_data",
-    element: <ExternalData />,
-    children: routes,
-    errorElement: <div>error</div>
-  }
-]);
+);
 
 root.render(
   <StrictMode>
