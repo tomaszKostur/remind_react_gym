@@ -1,5 +1,5 @@
 /* let's skip the tailwind this time */
-/* @import "tailwindcss"; */  
+/* @import "tailwindcss"; */
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
@@ -271,6 +271,14 @@ main h3 {
   transition: all 0.2s ease-in-out;
 }
 
+.nav-bar {
+  display: flex;
+  margin-block: 2rem;
+  /* background-color: #313275; */
+  justify-content: center;
+  gap: 1rem; /* space between buttons */
+}
+
 #nav-button {
   margin: 1rem;
   padding: 0.5rem 1rem;
@@ -289,7 +297,7 @@ main h3 {
 #nav-button:hover {
   background-color: #ceb3e9;
 }
-#nav-button a{
+#nav-button a {
   color: white;
   text-decoration: none;
 }
@@ -302,7 +310,7 @@ main h3 {
 .game-button a {
   color: white;
 }
-.centered{
+.centered {
   display: flex;
   justify-content: center;
   /* background-color: chartreuse; */
@@ -400,5 +408,34 @@ main h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+}
+/* External data styling */
+.simple-content {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #140524;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin-block: 2rem;;
+}
+
+.cat-list {
+  list-style: none;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.cat-item {
+  text-align: center;
+}
+
+.cat-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
 }

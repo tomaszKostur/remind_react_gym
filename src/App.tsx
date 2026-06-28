@@ -20,7 +20,10 @@ function App() {
       <Header />
       <main>
         <ChooseExcersise />
-        <NavButton target='/game' name='Go to Game'/>
+        <div className="nav-bar">
+          <NavButton target="/game" name="Go to Game" />
+          <NavButton target="/external_data" name="Go External Data Example" />
+        </div>
       </main>
     </div>
   );

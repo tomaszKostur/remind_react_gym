@@ -14,25 +14,41 @@ const initial_game_board = [
 ];
 
 function checkWinner(boardData) {
-  for(let i =0; i<3 ; i++){
-    for(let symbol of ['X', 'O']){
-      if (boardData[i][0] == symbol && boardData[i][1] == symbol && boardData[i][2] == symbol){
+  for (let i = 0; i < 3; i++) {
+    for (let symbol of ["X", "O"]) {
+      if (
+        boardData[i][0] == symbol &&
+        boardData[i][1] == symbol &&
+        boardData[i][2] == symbol
+      ) {
         return symbol;
       }
-      if (boardData[0][i] == symbol && boardData[1][i] == symbol && boardData[2][i] == symbol){
+      if (
+        boardData[0][i] == symbol &&
+        boardData[1][i] == symbol &&
+        boardData[2][i] == symbol
+      ) {
         return symbol;
       }
     }
   }
-  for(let symbol of ['X', 'O']){
-    if (boardData[0][0] == symbol && boardData[1][1] == symbol && boardData[2][2] == symbol){
-        return symbol;
+  for (let symbol of ["X", "O"]) {
+    if (
+      boardData[0][0] == symbol &&
+      boardData[1][1] == symbol &&
+      boardData[2][2] == symbol
+    ) {
+      return symbol;
     }
-    if (boardData[0][2] == symbol && boardData[1][1] == symbol && boardData[2][0] == symbol){
-        return symbol;
+    if (
+      boardData[0][2] == symbol &&
+      boardData[1][1] == symbol &&
+      boardData[2][0] == symbol
+    ) {
+      return symbol;
     }
   }
-  return
+  return;
 }
 
 function Game() {
@@ -58,7 +74,7 @@ function Game() {
     // setWinner(checkWinner(boardData));
   }
 
-  function cleanBaord(){
+  function cleanBaord() {
     setBoardData(initial_game_board);
     setWinner(null);
   }
@@ -81,8 +97,15 @@ function Game() {
           />
         </ol>
         <GameBoard onMoveHaldler={handleMove} boardData={boardData} />
-        {winner ? <GameOver onRestart={cleanBaord} winnerName={`${winner}`}/> : ''}
-        {<NavButton target={"/"} name="Home" />}
+        {winner ? (
+          <GameOver onRestart={cleanBaord} winnerName={`${winner}`} />
+        ) : (
+          ""
+        )}
+        <div className="nav-bar">
+          <NavButton target="/external_data" name="Go External Data Example" />
+          <NavButton target="/" name="Go to Gym Home" />
+        </div>
       </main>
     </div>
   );
